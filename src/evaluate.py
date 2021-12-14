@@ -16,7 +16,7 @@ image_size = x_train.shape[1]
 input_size = image_size * image_size
 
 # Model specific code
-x_test = np.reshape(x_test, [-1, input_size])
+x_test = x_test.reshape(-1, 28, 28, 1)
 x_test = x_test.astype('float32') / 255
 # End of Model specific code
 
